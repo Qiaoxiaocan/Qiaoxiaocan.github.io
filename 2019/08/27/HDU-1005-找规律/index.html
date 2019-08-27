@@ -7,26 +7,26 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>POJ 1006(中国剩余定理) | 梦中是你，与枕俱醒</title>
+  <title>HDU 1005(找规律) | 梦中是你，与枕俱醒</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="POJ,模拟,数论,">
+    <meta name="keywords" content="找规律,HDU,">
   
 
-  <meta name="description" content="POJ1006http://poj.org/problem?id=1006 中国剩余定理，不过暴力打表的话也能做出来，下面先上暴力打表代码： 123456789101112131415161718192021222324252627282930313233#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstring&amp;gt;usi">
-<meta name="keywords" content="POJ,模拟,数论">
+  <meta name="description" content="HDU1005http://acm.hdu.edu.cn/showproblem.php?pid=1005 这个题的数据比较大，如果递归或者暴力打表都会超时或超内存，因此只能找找规律。 首先这个规律一定和7有关，但是我算了好多组数据却只发现不同数据A%7和B%7一样时他们循环的长度是相同的，但找不到具体的关系，看了题解才搞懂。 在A和B相同时，f(n)的值只和f(n-1)与f(n-2)有关，而且f">
+<meta name="keywords" content="找规律,HDU">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ 1006(中国剩余定理)">
-<meta property="og:url" content="http://yoursite.com/2019/08/27/POJ-1006-中国剩余定理/index.html">
+<meta property="og:title" content="HDU 1005(找规律)">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/HDU-1005-找规律/index.html">
 <meta property="og:site_name" content="梦中是你，与枕俱醒">
-<meta property="og:description" content="POJ1006http://poj.org/problem?id=1006 中国剩余定理，不过暴力打表的话也能做出来，下面先上暴力打表代码： 123456789101112131415161718192021222324252627282930313233#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstring&amp;gt;usi">
+<meta property="og:description" content="HDU1005http://acm.hdu.edu.cn/showproblem.php?pid=1005 这个题的数据比较大，如果递归或者暴力打表都会超时或超内存，因此只能找找规律。 首先这个规律一定和7有关，但是我算了好多组数据却只发现不同数据A%7和B%7一样时他们循环的长度是相同的，但找不到具体的关系，看了题解才搞懂。 在A和B相同时，f(n)的值只和f(n-1)与f(n-2)有关，而且f">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-27T14:17:54.041Z">
+<meta property="og:updated_time" content="2019-08-27T14:21:41.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ 1006(中国剩余定理)">
-<meta name="twitter:description" content="POJ1006http://poj.org/problem?id=1006 中国剩余定理，不过暴力打表的话也能做出来，下面先上暴力打表代码： 123456789101112131415161718192021222324252627282930313233#include&amp;lt;cstdio&amp;gt;#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstring&amp;gt;usi">
+<meta name="twitter:title" content="HDU 1005(找规律)">
+<meta name="twitter:description" content="HDU1005http://acm.hdu.edu.cn/showproblem.php?pid=1005 这个题的数据比较大，如果递归或者暴力打表都会超时或超内存，因此只能找找规律。 首先这个规律一定和7有关，但是我算了好多组数据却只发现不同数据A%7和B%7一样时他们循环的长度是相同的，但找不到具体的关系，看了题解才搞懂。 在A和B相同时，f(n)的值只和f(n-1)与f(n-2)有关，而且f">
 
   
 
@@ -172,15 +172,15 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#POJ1006"><span class="toc-text">POJ1006</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#中国剩余定理"><span class="toc-text">中国剩余定理</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HDU1005"><span class="toc-text">HDU1005</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#看代码"><span class="toc-text">看代码</span></a></li></ol></li></ol></li></ol></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-POJ-1006-中国剩余定理" class="article article-type-post" itemprop="blogPost">
+   <article id="post-HDU-1005-找规律" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">POJ 1006(中国剩余定理)</h1>
+    <h1 class="post-title">HDU 1005(找规律)</h1>
 
     <div class="article-meta">
       <span>
@@ -198,7 +198,7 @@
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/刷题-POJ/">-刷题 -POJ</a>
+    <a class="article-category-link" href="/categories/刷题-HDU/">-刷题 -HDU</a>
   </span>
 
 
@@ -218,12 +218,12 @@
 
   <div class="article-content">
     
-      <h1 id="POJ1006"><a href="#POJ1006" class="headerlink" title="POJ1006"></a>POJ1006</h1><p><a href="http://poj.org/problem?id=1006" target="_blank" rel="noopener">http://poj.org/problem?id=1006</a></p>
-<p>中国剩余定理，不过暴力打表的话也能做出来，下面先上暴力打表代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int num, p, e, f, d;</span><br><span class="line">    num = 0;</span><br><span class="line">    int mmp[5][40000];</span><br><span class="line">    while(cin &gt;&gt; p &gt;&gt; e &gt;&gt; f &gt;&gt; d)</span><br><span class="line">    &#123;</span><br><span class="line">        if(p == -1)</span><br><span class="line">            break;</span><br><span class="line">        p %= 23;       //取第一次到达高峰时间</span><br><span class="line">        e %= 28;</span><br><span class="line">        f %= 33;</span><br><span class="line">        memset(mmp, 0, sizeof(mmp));       //把表初始化</span><br><span class="line">        num ++;           //记录循环次数</span><br><span class="line">        for(int i = 0; i &lt; 1600; i ++)    //打表</span><br><span class="line">        &#123;</span><br><span class="line">            mmp[0][p + i * 23] ++;</span><br><span class="line">            mmp[1][e + i * 28] ++;</span><br><span class="line">            mmp[2][f + i * 33] ++;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i = d + 1; i &lt;= 30000; i ++)    //遍历表格输出答案</span><br><span class="line">            if(mmp[0][i]==1&amp;&amp;mmp[1][i]==1&amp;&amp;mmp[2][i]==1)</span><br><span class="line">            &#123;</span><br><span class="line">                printf(&quot;Case %d: the next triple peak occurs in %d days.\n&quot;, num, i - d);</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      <h1 id="HDU1005"><a href="#HDU1005" class="headerlink" title="HDU1005"></a>HDU1005</h1><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1005" target="_blank" rel="noopener">http://acm.hdu.edu.cn/showproblem.php?pid=1005</a></p>
+<p>这个题的数据比较大，如果递归或者暴力打表都会超时或超内存，因此只能找找规律。</p>
+<p>首先这个规律一定和7有关，但是我算了好多组数据却只发现不同数据A%7和B%7一样时他们循环的长度是相同的，但找不到具体的关系，看了题解才搞懂。</p>
+<p>在A和B相同时，f(n)的值只和f(n-1)与f(n-2)有关，而且f(n-1)和f(n-2)的取值只有0,1,2,3,4,5,6这七个数，因此循环最长为49，这样就解决了。</p>
+<h4 id="看代码"><a href="#看代码" class="headerlink" title="看代码"></a>看代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int arr[1005];</span><br><span class="line">int a,b,n;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    while(cin &gt;&gt; a &gt;&gt; b &gt;&gt; n)</span><br><span class="line">    &#123;</span><br><span class="line">        if(a == 0 &amp;&amp; b == 0 &amp;&amp; n == 0)</span><br><span class="line">            break;</span><br><span class="line">        arr[2] = 1;</span><br><span class="line">        arr[1] = 1;</span><br><span class="line">        int T;</span><br><span class="line">        for(int i = 3; i &lt; 50; i ++)</span><br><span class="line">        &#123;</span><br><span class="line">            arr[i] = (a * arr[i - 1] + b * arr[i - 2]) % 7;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; arr [n%49] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>打表的思路很简单，但要注意打的表不能刚到21252，因为最后的答案要减去d，所以打表至少要到21252+365。当初就是因为没意识到这一点，WA了三发。</p>
-<h5 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h5><p>我还不会，待补。。。</p>
 
     
   </div>
@@ -261,10 +261,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2019/08/27/HDU-1005-找规律/">
+    <a class="show pull-left" href="/2019/08/26/hello-world/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="hide pull-right" href="/">
+    <a class="show pull-right" href="/2019/08/27/POJ-1006-中国剩余定理/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
