@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>UVA-202-循环小数-找规律 | 梦中是你，与枕俱醒</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="找规律,UVA,紫书,">
+  
+
+  <meta name="description" content="UVA-202-Repeating Decimals​    The decimal expansion of the fraction 1/33 is 0.03, where the 03 is used to indicate that the cycle 03repeats indefinitely with no intervening digits. In fact, the decim">
+<meta name="keywords" content="找规律,UVA,紫书">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UVA-202-循环小数-找规律">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/UVA-202-循环小数-找规律/index.html">
+<meta property="og:site_name" content="梦中是你，与枕俱醒">
+<meta property="og:description" content="UVA-202-Repeating Decimals​    The decimal expansion of the fraction 1/33 is 0.03, where the 03 is used to indicate that the cycle 03repeats indefinitely with no intervening digits. In fact, the decim">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="c:%5CUsers%5C%E4%B9%94%E6%99%93%E7%81%BF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570622838024.png">
+<meta property="og:updated_time" content="2019-10-09T12:27:17.506Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UVA-202-循环小数-找规律">
+<meta name="twitter:description" content="UVA-202-Repeating Decimals​    The decimal expansion of the fraction 1/33 is 0.03, where the 03 is used to indicate that the cycle 03repeats indefinitely with no intervening digits. In fact, the decim">
+<meta name="twitter:image" content="c:%5CUsers%5C%E4%B9%94%E6%99%93%E7%81%BF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570622838024.png">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.jpg">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UVA-202-Repeating-Decimals"><span class="toc-text">UVA-202-Repeating Decimals</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Input"><span class="toc-text">Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Output"><span class="toc-text">Output</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sample-Input"><span class="toc-text">Sample Input</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sample-Output"><span class="toc-text">Sample Output</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-UVA-202-循环小数-找规律" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">UVA-202-循环小数-找规律</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.10.09</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Qiao xiaocan</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/紫书/">-紫书</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="UVA-202-Repeating-Decimals"><a href="#UVA-202-Repeating-Decimals" class="headerlink" title="UVA-202-Repeating Decimals"></a>UVA-202-Repeating Decimals</h1><p>​    The decimal expansion of the fraction 1/33 is 0.03, where the 03 is used to indicate that the cycle 03<br>repeats indefinitely with no intervening digits. In fact, the decimal expansion of every rational number<br>(fraction) has a repeating cycle as opposed to decimal expansions of irrational numbers, which have no<br>such repeating cycles.<br>​    Examples of decimal expansions of rational numbers and their repeating cycles are shown below.<br>Here, we use parentheses to enclose the repeating cycle rather than place a bar over the cycle.</p>
+<p><img src="C:%5CUsers%5C%E4%B9%94%E6%99%93%E7%81%BF%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570622838024.png" alt="1570622838024"></p>
+<p>​    Write a program that reads numerators and denominators of fractions and determines their repeating<br>cycles.</p>
+<p>​    For the purposes of this problem, define a repeating cycle of a fraction to be the first minimal length<br>string of digits to the right of the decimal that repeats indefinitely with no intervening digits. Thus<br>for example, the repeating cycle of the fraction 1/250 is 0, which begins at position 4 (as opposed to 0<br>which begins at positions 1 or 2 and as opposed to 00 which begins at positions 1 or 4).</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>​    Each line of the input file consists of an integer numerator, which is nonnegative, followed by an integer<br>denominator, which is positive. None of the input integers exceeds 3000. End-of-file indicates the end<br>of input.</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>​    For each line of input, print the fraction, its decimal expansion through the first occurrence of the cycle<br>to the right of the decimal or 50 decimal places (whichever comes first), and the length of the entire<br>repeating cycle.<br>​    In writing the decimal expansion, enclose the repeating cycle in parentheses when possible. If the<br>entire repeating cycle does not occur within the first 50 places, place a left parenthesis where the cycle<br>begins — it will begin within the first 50 places — and place ‘…)’ after the 50th digit.</p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 76 25</span><br><span class="line">&gt; 5 43</span><br><span class="line">&gt; 1 397</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><blockquote>
+<p>76/25 = 3.04(0)<br>     1 = number of digits in repeating cycle<br>5/43 = 0.(116279069767441860465)<br>      21 = number of digits in repeating cycle<br>1/397 = 0.(00251889168765743073047858942065491183879093198992…)<br>      99 = number of digits in repeating cycle</p>
+</blockquote>
+<p>这是一个找规律的题</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>7</td>
+<td>1</td>
+<td>4</td>
+<td>2</td>
+<td>8</td>
+<td>5</td>
+<td>7</td>
+<td></td>
+<td>商</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+<td>4</td>
+<td>5</td>
+<td>1</td>
+<td></td>
+<td>余数</td>
+</tr>
+</tbody></table>
+<p>根据5和7这组数据，可以发现，如果出现同样的余数，那么就会出现循环。我们可以用三个数组，一个标记该余数是否出现过，一个记录商，一个按照顺序记录余数，在出现相同的余数后，从按顺序记录的余数数组中找到该余数中间有多少位即为循环有多少位。然后根据题目要求的格式打印答案就行。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int shang[3005], yu[3005], res[3005];</span><br><span class="line">int a, b;</span><br><span class="line">int ans;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    while(cin &gt;&gt; a)&#123;</span><br><span class="line">        cin &gt;&gt; b;</span><br><span class="line">        ans = 0;</span><br><span class="line">        cout &lt;&lt; a &lt;&lt; &apos;/&apos; &lt;&lt; b &lt;&lt; &quot; = &quot;;</span><br><span class="line">        memset(shang, 0, sizeof(shang));</span><br><span class="line">        memset(yu, 0, sizeof(yu));</span><br><span class="line">        while(1)&#123;</span><br><span class="line">            int k = a % b;</span><br><span class="line">            res[ans] = k;</span><br><span class="line">            if(yu[k] == 0)&#123;</span><br><span class="line">                yu[k] = 1;</span><br><span class="line">                shang[ans] = (a - k) / b;</span><br><span class="line">                ans ++;</span><br><span class="line">                a = k * 10;</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                yu[k] = 1;</span><br><span class="line">                shang[ans] = (a - k) / b;</span><br><span class="line">                ans ++;</span><br><span class="line">                a = k * 10;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int x = ans;</span><br><span class="line">        for(int i = ans - 2; i &gt;= 0; i --)&#123;</span><br><span class="line">            if(res[i] == res[ans - 1])&#123;</span><br><span class="line">                ans -= i + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(ans == 0)&#123;</span><br><span class="line">            ans ++;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; shang[0] &lt;&lt; &apos;.&apos;;</span><br><span class="line">        for(int i = 1; i &lt; x - ans; i ++)&#123;</span><br><span class="line">            cout &lt;&lt;shang[i];</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; &apos;(&apos;;</span><br><span class="line">        for(int i = x - ans; i &lt; x; i ++)&#123;</span><br><span class="line">            if(i == 51)&#123;</span><br><span class="line">                cout &lt;&lt; &quot;...&quot;;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            cout &lt;&lt; shang[i];</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; &apos;)&apos; &lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; &quot;   &quot;;</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; &quot; = number of digits in repeating cycle&quot; &lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">他来了他来了，他带着money走来了</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/10/09/UVA-1588-换抵挡装置-模拟/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '277317290454635afa73',
+  clientSecret: '78223c859304da5e8d71bfce136d436c6ff95c37',
+  repo: 'blog-comment',
+  owner: 'forsigner',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: location.pathname,
+  admin: ['forsigner'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
